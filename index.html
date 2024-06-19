@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Stay organized and manage your tasks efficiently with our Todo App. Add, edit, complete, and delete tasks seamlessly. Your productivity companion."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <!-- Website icon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/todo.png" />
+    <!-- Fontawesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="container">
+        <div class="wrapper">
+          <h2 class="navbar-logo">
+            <a href="./index.html">
+              <span><i class="fa-solid fa-pen"></i></span> ToDo app
+            </a>
+          </h2>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ToDo -->
+    <section id="todo">
+      <div class="container">
+        <div class="todo-container">
+          <!-- ToDo form -->
+          <form id="todo-form">
+            <input
+              type="text"
+              name="Task:"
+              id="todo-text"
+              placeholder="Enter your task..."
+            />
+            <button class="add-task">Add</button>
+          </form>
+          <span class="error-message"></span>
+
+          <!-- Todo lists -->
+          <div class="todo-lists"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal hidden">
+      <div class="modal-content">
+        <span id="close-modal"><i class="fa-solid fa-xmark"></i></span>
+        <!-- Edit form -->
+        <form id="edit-form">
+          <input
+            type="text"
+            name="Task:"
+            id="edit-text"
+            placeholder="Edit your task..."
+          />
+          <span class="error-edit"></span>
+          <button id="edit-task">Save changes</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="overlay hidden"></div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
